@@ -1,0 +1,10 @@
+// BEGIN_INTERNALS
+/*
+MAP_ICON_TYPE: 0
+WINDOW: maps\oldstation.dmm;maps\tgstation.2.1.2.dmm;maps\verum.dmm;maps\verum2.dmm
+UPDATE_OBJ_TREE: ON
+DIR: maps 
+FILE: maps\verum2.dmm
+AUTO_FILE_DIR: ON
+*/
+// END_INTERNALS
