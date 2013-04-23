@@ -1,10 +1,11 @@
 // BEGIN_INTERNALS
 /*
 MAP_ICON_TYPE: 0
-WINDOW: maps\oldstation.dmm;maps\tgstation.2.1.2.dmm;maps\verum.dmm;maps\verum2.dmm
-UPDATE_OBJ_TREE: ON
-DIR: maps 
-FILE: maps\verum2.dmm
+WINDOW: code\global.dm;code\datums\mind.dm;code\datums\diseases\advance\symptoms\fever.dm;code\datums\diseases\advance\presets.dm;code\datums\diseases\advance\advance.dm;code\modules\reagents\Chemistry-Recipes.dm;code\modules\reagents\Chemistry-Reagents.dm;code\__DEFINES.dm;code\datums\diseases\advance\symptoms\heal.dm;code\datums\diseases\cold9.dm;code\datums\diseases\gbs.dm;code\datums\diseases\flu.dm;code\controllers\configuration.dm;code\modules\admin\admin_ranks.dm;code\hub.dm
+LAST_COMPILE_VERSION: 496.1145
+DIR: code code\ATMOSPHERICS code\controllers code\datums code\datums\diseases code\datums\diseases\advance code\datums\diseases\advance\symptoms code\defines\procs code\game code\game\machinery\bots code\game\machinery\computer code\game\machinery\doors code\game\objects\structures code\modules code\modules\admin code\modules\reagents 
+FILE: code\global.dm
+LAST_COMPILE_TIME: 1365516661
 AUTO_FILE_DIR: ON
 */
 // END_INTERNALS
