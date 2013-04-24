@@ -135,6 +135,7 @@
 		parts -= picked
 	updatehealth()
 	if(update)	UpdateDamageIcon(0)
+	raiseFear((brute + burn) / 10)
 
 
 ////////////////////////////////////////////
@@ -189,3 +190,78 @@
 
 	updatehealth()
 	return 1
+
+/mob/living/carbon/human/proc/raiseFear(var/amount) //Main
+	raiseFearProcess = 1
+	spawn(1)
+		if (!src.stat && raiseFearProcess)
+			heartSpeed = max(0, heartSpeed + amount) //Not less 0, but more 50
+			if (heartSpeed >= 50)
+				if (stage != 6)
+					//Last stage before death
+					if (prob(min(100, 30 * (infarctCounter + 1))))
+						//Teh death
+						src << "\red \bold You feel that The Death comes to you..."
+						flick(image('HeartHud.dmi', "icon_state" = "infarct"), heart)
+						src.infarcted = 1
+						stat = DEAD
+						heart.icon_state = "infarcted" //There is other reason of dead
+						heartSpeed = -1
+						stage = 0
+					else
+						src << "\red You feel that The Death comes to you... you can't stand, and get a fainting. You're lucky."
+						raiseFear(-heartSpeed)
+						infarctCounter++
+						Paralyse(rand(180, 300))
+				raiseFearProcess = 0
+				return
+			if (heartSpeed >= 40)
+				if (stage != 5)
+					screamChance = 50 + (heartSpeed - 40) * 4 //From 50 to 77%
+					halluChance = 20 + (heartSpeed - 40) * 5 //From 20 to 60%
+					src << "\red \bold Your heart move very quick! That's critical state!"
+				stage = 5
+				raiseFearProcess = 0
+				return
+			if (heartSpeed >= 35)
+				if (stage != 4)
+					screamChance = 30 + (heartSpeed - 35) * 4 //30 to 46%
+					halluChance = (heartSpeed - 35) * 4 //0 to 16%
+				stage = 4
+				raiseFearProcess = 0
+				return
+			if (heartSpeed >= 20)
+				if (stage != 3)
+					src << "\red Your heart move so quickly."
+					halluChance = 0 //0%
+					screamChance = heartSpeed - 20 //0 to 14%
+				stage = 3
+				raiseFearProcess = 0
+				return
+			if (heartSpeed >= 10)
+				if (stage != 2)
+					if (!adrenalineCooldown)
+						var/time = rand(600,1200)
+						analgestic = time
+						spawn(time)
+							analgestic = 0 //Adrenaline boost
+							adrenalineCooldown = 1
+							spawn(600)
+								adrenalineCooldown = 0
+				stage = 2
+				raiseFearProcess = 0
+				return
+			if (heartSpeed >= 5)
+				if (stage != 1)
+					src << "\blue Your heart move sligtly fast"
+				stage = 1
+				raiseFearProcess = 0
+				return
+
+			if (heartSpeed >= 0)
+				stage = 0
+				screamChance = 0
+				halluChance = 0
+				raiseFearProcess = 0
+				return
+	raiseFearProcess = 0

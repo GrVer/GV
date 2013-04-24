@@ -1,12 +1,11 @@
 // BEGIN_INTERNALS
 /*
 MAP_ICON_TYPE: 0
-WINDOW: code\modules\mob\living\carbon\human\human_attackhand.dm;maps\verum.dmm
-LAST_COMPILE_VERSION: 498.1158
-UPDATE_OBJ_TREE: ON
-DIR: code code\game code\game\gamemodes code\game\gamemodes\changeling code\modules code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human maps maps\RandomZLevels 
-FILE: maps\verum.dmm
-LAST_COMPILE_TIME: 1366821454
+WINDOW: code\modules\mob\mob_defines.dm
+LAST_COMPILE_VERSION: 496.1145
+DIR: code code\ATMOSPHERICS code\controllers code\datums code\datums\diseases code\datums\diseases\advance code\datums\diseases\advance\symptoms code\defines\procs code\game code\game\machinery\bots code\game\machinery\computer code\game\machinery\doors code\modules code\modules\mob 
+FILE: code\modules\mob\mob_defines.dm
+LAST_COMPILE_TIME: 1366823046
 AUTO_FILE_DIR: ON
 */
 // END_INTERNALS
