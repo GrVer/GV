@@ -93,21 +93,6 @@
 	for(var/obj/item/weapon/grab/G in src)
 		G.process()
 
-	//Corpse and blood
-	for(var/obj/effect/decal/cleanable/blood/B in view(world.view, src))
-		if (!(B in siedBlood))
-			raiseFear(1)
-			siedBlood += B
-
-	for(var/mob/living/carbon/human/H in view(world.view, src))
-		if (H.stat == 2)
-			if (!(H in siedCorpse))
-				raiseFear(5)
-				siedCorpse += H
-
-	//Heart.
-	if (prob(2 * heartSpeed)) //Calm = 0%, almost infarct = 98%
-		heartSpeed = max(0, heartSpeed - 1) //GOVNOKOD STYLE
 
 /mob/living/carbon/human/calculate_affecting_pressure(var/pressure)
 	..()
@@ -849,6 +834,7 @@
 						fake_attack(src)
 					if(!handling_hal)
 						spawn handle_hallucinations() //The not boring kind!
+
 				if(hallucination<=2)
 					hallucination = 0
 					halloss = 0
@@ -865,17 +851,6 @@
 						O.show_message("<B>[src]</B> slumps to the ground panting, too weak to continue fighting.", 1)
 					Paralyse(3)
 					setHalLoss(99)
-
-			if (screamChance)
-				//That calls every 1 second. We change it to 20.
-				if (prob(screamChance))
-					src.screamoverlay.icon_state = "B[rand(1,6)]"
-					spawn (rand(3,5))
-						src.screamoverlay.icon_state = null
-
-			if (halluChance)
-				if (prob(screamChance) / 20)
-					new /obj/effect/fake_Gagarin(null, src)
 
 			if(paralysis)
 				AdjustParalysis(-1)
@@ -1117,13 +1092,6 @@
 							if(20 to 40)			healths.icon_state = "health4"
 							if(0 to 20)				healths.icon_state = "health5"
 							else					healths.icon_state = "health6"
-
-			if(heart)
-				switch(heartSpeed)
-					if (0 to 5)	heart.icon_state = "normal"
-					if (5 to 40)	heart.icon_state = "fast"
-					if (40 to 49)	heart.icon_state = "critical"
-
 
 			if(nutrition_icon)
 				switch(nutrition)

@@ -263,14 +263,6 @@
 	mymob.healths.name = "health"
 	mymob.healths.screen_loc = ui_health
 
-	//Hearth
-	mymob.heart = new /obj/screen()
-	mymob.heart.icon = 'HeartHud.dmi'
-	mymob.heart.icon_state = "normal"
-	mymob.heart.name = "heart"
-	mymob.heart.screen_loc = ui_heart
-	//End
-
 	mymob.nutrition_icon = new /obj/screen()
 	mymob.nutrition_icon.icon_state = "nutrition0"
 	mymob.nutrition_icon.name = "nutrition"
@@ -299,14 +291,6 @@
 	mymob.damageoverlay.mouse_opacity = 0
 	mymob.damageoverlay.layer = 18.1 //The black screen overlay sets layer to 18 to display it, this one has to be just on top.
 
-	mymob.screamoverlay = new /obj/screen()
-	mymob.screamoverlay.icon = 'screamers.dmi'
-	mymob.screamoverlay.icon_state = "B0"
-	mymob.screamoverlay.name = "OH, SHI~"
-	mymob.screamoverlay.screen_loc = "1,1"
-	mymob.screamoverlay.mouse_opacity = 1
-	mymob.screamoverlay.layer = 17
-
 	mymob.flash = new /obj/screen()
 	mymob.flash.icon_state = "blank"
 	mymob.flash.name = "flash"
@@ -319,7 +303,7 @@
 
 	mymob.client.screen = null
 
-	mymob.client.screen += list( mymob.throw_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.heart, mymob.nutrition_icon, mymob.pullin, mymob.blind, mymob.flash, mymob.damageoverlay, mymob.screamoverlay) //, mymob.hands, mymob.rest, mymob.sleep) //, mymob.mach )
+	mymob.client.screen += list( mymob.throw_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.nutrition_icon, mymob.pullin, mymob.blind, mymob.flash, mymob.damageoverlay) //, mymob.hands, mymob.rest, mymob.sleep) //, mymob.mach )
 	mymob.client.screen += adding + hotkeybuttons
 	inventory_shown = 0;
 

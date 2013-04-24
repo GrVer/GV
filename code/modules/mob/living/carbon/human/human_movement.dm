@@ -5,8 +5,6 @@
 
 	if(reagents.has_reagent("nuka_cola")) return -1
 
-	if(analgestic)	return -1
-
 	if (istype(loc, /turf/space)) return -1 // It's hard to be slowed down in space by... anything
 
 	var/health_deficiency = (100 - health - halloss)

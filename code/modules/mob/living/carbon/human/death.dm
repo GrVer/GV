@@ -45,11 +45,6 @@
 		return
 	if(stat == DEAD)	return
 	if(healths)		healths.icon_state = "health5"
-	if(heart && !infarcted)	heart.icon_state = "stopped" //You're dead. Serious.
-	for (var/mob/living/carbon/human/H in viewers(world.view, src))
-		if (!H.sleeping && !H.paralysis && !H.blind)
-			H.raiseFear(5)
-			H.siedCorpse += src
 	stat = DEAD
 	dizziness = 0
 	jitteriness = 0
