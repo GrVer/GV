@@ -106,7 +106,7 @@
 	var/siedMonstreType = list()
 	var/infarcted = 0
 	var/stage = 0
-	var/raiseFearProcess = 0
+	var/
 	//End
 	var/losebreath = 0.0//Carbon
 	var/intent = null//Living

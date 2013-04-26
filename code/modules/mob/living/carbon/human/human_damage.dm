@@ -210,8 +210,8 @@
 					src << "\red You feel that The Death comes to you... you can't stand, and get a fainting. You're lucky."
 					raiseFear(-heartSpeed)
 					infarctCounter++
-					Paralyse(rand(180, 300))
-			raiseFearProcess = 0
+					Paralyse(rand(135, 225))
+
 			return
 		if (heartSpeed >= 40)
 			if (stage != 5)
@@ -219,14 +219,14 @@
 				halluChance = 20 + (heartSpeed - 40) * 5 //From 20 to 60%
 				src << "\red \bold Your heart move very quick! That's critical state!"
 			stage = 5
-			raiseFearProcess = 0
+
 			return
 		if (heartSpeed >= 35)
 			if (stage != 4)
 				screamChance = 30 + (heartSpeed - 35) * 4 //30 to 46%
 				halluChance = (heartSpeed - 35) * 4 //0 to 16%
 			stage = 4
-			raiseFearProcess = 0
+
 			return
 		if (heartSpeed >= 20)
 			if (stage != 3)
@@ -234,7 +234,7 @@
 				halluChance = 0 //0%
 				screamChance = heartSpeed - 20 //0 to 14%
 			stage = 3
-			raiseFearProcess = 0
+
 			return
 		if (heartSpeed >= 10)
 			if (stage != 2)
@@ -247,18 +247,18 @@
 						spawn(600)
 							adrenalineCooldown = 0
 			stage = 2
-			raiseFearProcess = 0
+
 			return
 		if (heartSpeed >= 5)
 			if (stage != 1)
 				src << "\blue Your heart move sligtly fast"
 			stage = 1
-			raiseFearProcess = 0
+
 			return
 
 		if (heartSpeed >= 0)
 			stage = 0
 			screamChance = 0
 			halluChance = 0
-			raiseFearProcess = 0
+
 			return

@@ -263,7 +263,7 @@
 	mymob.healths.name = "health"
 	mymob.healths.screen_loc = ui_health
 
-	//Hearth
+	//Heart
 	mymob.heart = new /obj/screen()
 	mymob.heart.icon = 'HeartHud.dmi'
 	mymob.heart.icon_state = "normal"

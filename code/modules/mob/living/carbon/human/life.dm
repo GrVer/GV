@@ -875,7 +875,7 @@
 
 			if (halluChance)
 				if (prob(screamChance) / 20)
-					new /obj/effect/fake_Gagarin(null, src)
+					//new /obj/effect/fake_Gagarin(null, src)
 
 			if(paralysis)
 				AdjustParalysis(-1)
