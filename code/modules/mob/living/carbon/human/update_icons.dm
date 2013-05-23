@@ -305,13 +305,14 @@ Please contact me on #coderbus IRC. ~Carn x
 	for(var/mut in mutations)
 		switch(mut)
 			if(HULK)
-				if(fat)
-					lying.underlays		+= "hulk_[fat]_l"
-					standing.underlays	+= "hulk_[fat]_s"
-				else
-					lying.underlays		+= "hulk_[g]_l"
-					standing.underlays	+= "hulk_[g]_s"
-				add_image = 1
+				if (!morpheusState)
+					if(fat)
+						lying.underlays		+= "hulk_[fat]_l"
+						standing.underlays	+= "hulk_[fat]_s"
+					else
+						lying.underlays		+= "hulk_[g]_l"
+						standing.underlays	+= "hulk_[g]_s"
+					add_image = 1
 			if(COLD_RESISTANCE)
 				lying.underlays		+= "fire[fat]_l"
 				standing.underlays	+= "fire[fat]_s"

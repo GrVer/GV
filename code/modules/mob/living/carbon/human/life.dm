@@ -872,11 +872,11 @@
 					src.screamoverlay.icon_state = "B[rand(1,6)]"
 					spawn (rand(3,5))
 						src.screamoverlay.icon_state = null
-
+/*
 			if (halluChance)
 				if (prob(screamChance) / 20)
 					//new /obj/effect/fake_Gagarin(null, src)
-
+*/
 			if(paralysis)
 				AdjustParalysis(-1)
 				blinded = 1

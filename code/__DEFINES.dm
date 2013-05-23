@@ -199,7 +199,10 @@ var/turf/space/Space_Tile = locate(/turf/space) // A space tile to reference whe
 #define SHIELD			18 	// shielding from all projectile attacks (30%)
 #define SHOCKWAVE		19 	// attack a nearby tile and cause a massive shockwave, knocking most people on their asses (25%)
 #define ELECTRICITY		20 	// ability to shoot electric attacks (15%)
-
+/*
+	//Morpheus
+#define MORPHEUS_FORCE = 21
+*/
 	//2spooky
 #define SKELETON 29
 

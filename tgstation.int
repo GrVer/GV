@@ -1,11 +1,9 @@
 // BEGIN_INTERNALS
 /*
 MAP_ICON_TYPE: 0
-WINDOW: code\modules\reagents\Chemistry-Reagents.dm;code\modules\mob\living\carbon\brain\login.dm;code\modules\mob\living\carbon\human\human_attackpaw.dm;code\modules\mob\living\carbon\human\human_damage.dm;code\modules\mob\mob_defines.dm;code\modules\mob\living\carbon\human\human_damage - копия.dm;code\modules\mob\living\carbon\human\hud.dm;code\modules\mob\living\carbon\human\life.dm;code\_compile_options.dm;code\modules\mob\living\carbon\human\death.dm;icons\HeartHud.dmi;code\modules\reagents\Chemistry-Readme.dm;code\modules\reagents\Chemistry-Machinery.dm;code\datums\diseases\advance\symptoms\hallucigen.dm;code\datums\diseases\advance\symptoms\visionloss.dm;code\datums\diseases\advance\symptoms\youth.dm;code\game\atoms.dm;code\modules\mob\death.dm;code\modules\mob\living\carbon\alien\larva\powers.dm;code\modules\mob\living\carbon\metroid\powers.dm;code\unused\airtunnel.dm;code\unused\heater.dm;code\unused\siphs.dm;code\unused\gamemodes\monkey.dm;code\modules\mob\living\carbon\human\emote.dm;code\modules\mob\living\carbon\human\human.dm;code\game\smoothwall.dm;code\game\turfs\simulated\dirtystation.dm;code\modules\mob\living\carbon\alien\larva\login.dm;code\modules\mob\living\living_defines.dm
 LAST_COMPILE_VERSION: 496.1145
-DIR: code code\datums code\datums\diseases code\datums\diseases\advance code\datums\diseases\advance\symptoms code\defines\procs code\game code\game\gamemodes code\game\gamemodes\changeling code\game\gamemodes\cult code\game\objects code\game\objects\items code\game\objects\items\weapons code\game\objects\structures code\game\objects\structures\crates_lockers code\game\objects\structures\stool_bed_chair_nest code\game\turfs code\game\turfs\simulated code\game\turfs\space code\modules code\modules\mob code\modules\mob\dead code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\alien code\modules\mob\living\carbon\alien\larva code\modules\mob\living\carbon\brain code\modules\mob\living\carbon\human code\modules\mob\living\carbon\metroid code\modules\reagents code\unused code\unused\gamemodes code\WorkInProgress icons interface 
-FILE: code\modules\mob\living\living_defines.dm
-LAST_COMPILE_TIME: 1366991403
+DIR: code code\__HELPERS code\ATMOSPHERICS code\controllers code\datums code\datums\diseases code\datums\diseases\advance code\defines\obj code\defines\procs code\game code\game\gamemodes code\game\gamemodes\cult code\game\machinery code\game\machinery\bots 
+LAST_COMPILE_TIME: 1368697194
 AUTO_FILE_DIR: ON
 */
 // END_INTERNALS
